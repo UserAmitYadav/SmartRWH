@@ -1,0 +1,930 @@
+/* ======================================
+   Smart Rainwater Harvesting System
+   Global Styles
+====================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* CSS Variables */
+:root{
+
+    --primary:#0d6efd;
+    --secondary:#20c997;
+
+    --bg:#f5f7fb;
+    --surface:#ffffff;
+
+    --text:#222222;
+    --text-light:#6c757d;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+}
+
+/* Dark Mode Variables */
+
+body.dark{
+
+    --bg:#0f172a;
+    --surface:#1e293b;
+
+    --text:#ffffff;
+    --text-light:#cbd5e1;
+
+    --shadow:0 10px 25px rgba(0,0,0,.45);
+}
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    transition:var(--transition);
+
+    padding-top:85px;
+}
+
+/* Links */
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* Navbar */
+
+.custom-navbar{
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(12px);
+
+    /* box-shadow:var(--shadow); */
+
+    transition:var(--transition);
+}
+
+body.dark .custom-navbar{
+
+    background:rgba(15,23,42,.90);
+}
+
+/* Logo */
+
+.navbar-brand{
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+    color:var(--primary)!important;
+
+}
+body.dark .navbar-brand{
+
+    color:#4dabff !important;
+
+}
+
+/* Nav Links */
+
+.nav-link{
+
+    color:var(--text)!important;
+
+    margin-left:18px;
+
+    transition:.3s;
+}
+
+.nav-link:hover{
+
+    color:var(--primary)!important;
+}
+
+/* Buttons */
+
+.btn{
+
+    border-radius:12px;
+
+    transition:.3s;
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+}
+
+/* Hero Section */
+
+.hero{
+
+    min-height:85vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+}
+
+.hero h1{
+
+    font-size:3.5rem;
+
+    font-weight:800;
+}
+
+.hero p{
+
+    font-size:1.2rem;
+
+    color:var(--text-light);
+
+    max-width:700px;
+
+    margin:auto;
+}
+
+/* ==========================
+      HERO SECTION
+========================== */
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #eef7ff,
+        #ffffff
+    );
+
+}
+
+body.dark .hero{
+
+    background:#0f172a;
+
+}
+
+.hero-title{
+
+    font-size:60px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+}
+
+.hero-text{
+
+    font-size:18px;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+.hero-image{
+
+    width:90%;
+    border-radius: 20px;
+    animation:float 5s ease-in-out infinite;
+
+}
+
+/* Floating animation */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+/* ==========================
+      FEATURES SECTION
+========================== */
+
+.features{
+
+    background:#f8f9fc;
+
+    padding:80px 0;
+
+}
+
+body.dark .features{
+
+    background:#111827;
+
+}
+
+.feature-card{
+
+    background:var(--surface);
+
+    border-radius:20px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+    height:100%;
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.feature-icon{
+
+    font-size:55px;
+
+    color:#0d6efd;
+
+    margin-bottom:20px;
+
+}
+
+.feature-card h4{
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.feature-card p{
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+}
+/* ==========================
+        ABOUT SECTION
+========================== */
+
+.about{
+
+    padding:90px 0;
+
+}
+
+.about h2{
+
+    font-weight:700;
+
+}
+
+.about p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+.about li{
+
+    font-size:17px;
+
+}
+/* ==========================
+      STATISTICS
+========================== */
+
+.stats{
+
+    background:linear-gradient(135deg,#0d6efd,#20c997);
+
+    color:white;
+
+    padding:80px 0;
+
+}
+
+.stat-card{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat-icon{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+.stat-card h2{
+
+    font-size:40px;
+
+    font-weight:700;
+
+}
+
+.stat-card p{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+}
+/* ======================================
+   REGISTER PAGE
+====================================== */
+
+.register-page{
+
+    background:#f5f7fb;
+
+}
+
+body.dark .register-page{
+
+    background:#0f172a;
+
+}
+
+.register-left{
+
+    background:linear-gradient(135deg,#0d6efd,#20c997);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.register-card{
+
+    width:100%;
+    max-width:500px;
+
+    background:var(--surface);
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.form-control{
+
+    border-radius:12px;
+
+    padding:12px;
+
+}
+
+.form-control:focus{
+
+    box-shadow:none;
+
+    border-color:#0d6efd;
+
+}
+/* ===================================
+   DASHBOARD SIDEBAR
+=================================== */
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:260px;
+
+    height:100vh;
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:25px 20px;
+
+    overflow-y:auto;
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    text-align:center;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:40px;
+
+}
+
+.logo i{
+
+    color:#20c997;
+
+    font-size:40px;
+
+    display:block;
+
+    margin-bottom:10px;
+
+}
+
+.sidebar-menu{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.sidebar-menu li{
+
+    margin:15px 0;
+
+}
+
+.sidebar-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#d1d5db;
+
+    text-decoration:none;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.sidebar-menu a:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.sidebar-menu a.active{
+
+    background:#0d6efd;
+
+    color:white;
+
+}
+/* ==========================
+        TOPBAR
+========================== */
+
+.main-content{
+
+    margin-left:260px;
+
+    min-height:100vh;
+
+    background:#f4f7fc;
+
+    padding:30px;
+
+}
+
+body.dark .main-content{
+
+    background:#111827;
+
+}
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:white;
+
+    padding:20px 30px;
+
+    border-radius:18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    margin-bottom:30px;
+
+}
+
+body.dark .topbar{
+
+    background:#1f2937;
+
+}
+
+.topbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.user-avatar{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    margin-left:15px;
+
+    border:3px solid #0d6efd;
+
+}
+/* ==========================
+     DASHBOARD CARDS
+========================== */
+
+.dashboard-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+body.dark .dashboard-card{
+
+    background:#1f2937;
+
+    color:white;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card-icon{
+
+    font-size:45px;
+
+    color:#0d6efd;
+
+    margin-bottom:15px;
+
+}
+
+.dashboard-card h3{
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+.table td,
+.table th{
+
+vertical-align:middle;
+
+}
+
+.btn-sm{
+
+border-radius:10px;
+
+}
+/* ==========================
+   HISTORY PAGE DARK MODE
+========================== */
+
+body.dark .card{
+    background:#1f2937 !important;
+    color:#fff !important;
+}
+
+body.dark .card-header{
+    background:#111827 !important;
+    color:#fff !important;
+}
+
+body.dark .card-body{
+    background:#1f2937 !important;
+    color:#fff !important;
+}
+
+body.dark #historyTable{
+    --bs-table-bg:#1f2937;
+    --bs-table-color:#ffffff;
+    --bs-table-border-color:#374151;
+}
+
+body.dark #historyTable td,
+body.dark #historyTable th{
+    color:#ffffff !important;
+}
+
+body.dark .table-light{
+    --bs-table-bg:#374151 !important;
+    --bs-table-color:#ffffff !important;
+}
+/* ==========================
+   DARK MODE TEXT
+========================== */
+
+body.dark .text-muted{
+    color:#cbd5e1 !important;
+}
+/* Reports Table Dark Mode */
+
+body.dark .card{
+    background:#1f2937 !important;
+    color:#fff !important;
+}
+
+body.dark .card-header{
+    color:#fff !important;
+}
+
+body.dark .table{
+    color:#fff !important;
+}
+
+body.dark .table thead th{
+    color:#fff !important;
+    background:#1f2937 !important;
+    border-color:#374151 !important;
+}
+
+body.dark .table tbody td{
+    color:#fff !important;
+    background:#1f2937 !important;
+    border-color:#374151 !important;
+}
+
+body.dark .table-hover tbody tr:hover td{
+    background:#374151 !important;
+}
+/* Logout Sidebar */
+.logout-link {
+    color: #dc3545 !important;
+}
+
+.logout-link i {
+    color: #dc3545 !important;
+}
+
+.logout-link:hover {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+}
+
+.logout-link:hover i {
+    color: #fff !important;
+}
+/* ==========================
+   RESPONSIVE DASHBOARD
+========================== */
+
+@media (max-width:991px){
+
+    /* Sidebar */
+
+    .sidebar{
+
+        left:-260px;
+
+        transition:.3s;
+
+    }
+
+    .sidebar.show{
+
+        left:0;
+
+    }
+
+    /* Main Content */
+
+    .main-content{
+
+        margin-left:0;
+
+        padding:20px;
+
+    }
+
+    /* Topbar */
+
+    .topbar{
+
+        flex-wrap:wrap;
+
+        gap:15px;
+
+        padding:15px;
+
+    }
+
+    .topbar-left{
+
+        width:100%;
+
+    }
+
+    .topbar-right{
+
+        width:100%;
+        justify-content:flex-end;
+
+    }
+
+    /* Search */
+
+    .card-header .form-control{
+
+        width:100% !important;
+        margin-top:10px;
+
+    }
+
+}
+.table-responsive{
+
+    overflow-x:auto;
+
+}
+/* ==========================
+   VIEW CALCULATION
+========================== */
+
+.table th{
+
+    width:220px;
+
+    background:#f8f9fa;
+
+}
+
+body.dark .table th{
+
+    background:#374151;
+
+    color:white;
+
+}
+
+body.dark .table td{
+
+    color:white;
+
+}
+@media(max-width:992px){
+
+.hero-title{
+
+font-size:42px;
+
+text-align:center;
+
+}
+
+.hero{
+
+padding:80px 0;
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.hero h1{
+
+font-size:2.7rem;
+
+}
+
+.nav-link{
+
+margin-left:0;
+
+padding:12px 0;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:2.2rem;
+
+}
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+}
